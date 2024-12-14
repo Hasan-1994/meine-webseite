@@ -1,0 +1,14 @@
+<div class="container text-center mt-3" style="max-width: 50%;">
+    @for (item of data; track $index) {
+    @if (item.isActive) {
+    <div class="mb-3">
+        <a type="button" class="btn btn-outline-success w-75 my-btn" href="{{item.url}}" target="_blank">
+            <div class="row">
+                <img class="icon me-2 col-2 col-lg-12" src="{{item.imageUrl}}" alt="icon" />
+                <span class="col-9" [innerHTML]="item.name"></span>
+            </div>
+        </a>
+    </div>
+    }
+    }
+</div>
